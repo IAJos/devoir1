@@ -1,3 +1,4 @@
+import uuid
 from django.db import models
 from django.core.validators import MinValueValidator
 
@@ -10,7 +11,7 @@ class School(models.Model):
 
     name = models.fields.CharField(max_length=30)
     email = models.fields.EmailField(max_length=50)
-    # password = models.fields.DecimalField()
+    password = models.fields.UUIDField(default=uuid.uuid4, editable=False)
     site = models.fields.URLField()
     creation_date = models.fields.DateField()
     start_time = models.fields.TimeField()
