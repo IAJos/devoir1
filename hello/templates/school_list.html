@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container">
+        <div class="row row-panel">
+            <div class="col-sm-12 col-xs-12">
+                <a href="#" class="btn btn-sm btn-primary mb-2"><i class="fa fa-plus-circle"></i> Add New</a>
+            </div>
+            <div class="col-md-offset-1 col-md-10">
+                <div class="panel">
+                    <div class="panel-body table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Action</th>
+                                    <th>#</th>
+                                    <th>School name</th>
+                                    <th>Tuition fees</th>
+                                    <th>Site</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                {% for school in schools %}
+                                    <tr>
+                                        <td>
+                                            <ul class="action-list">
+                                                <li><a href="#" class="btn btn-primary"><i class="fa fa-pencil"></i></a></li>
+                                                <li><a href="#" class="btn btn-danger"><i class="fa fa-times"></i></a></li>
+                                            </ul>
+                                        </td>
+                                        <td>{{ school.id }}</td>
+                                        <td>{{ school.name }}</td>
+                                        <td>{{ school.tuition_fees }}</td>
+                                        <td><a href="{{ school.url }}" class="btn btn-sm btn-success"><i class="fa fa-search"></i></a></td>
+                                    </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

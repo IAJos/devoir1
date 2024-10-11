@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <div class="form-body">
+        <div class="row">
+            <div class="form-holder">
+                <h2>School informations</h2>
+                <div class="form-content">
+                    <div class="form-items">
+                        <h3>Register Today</h3>
+
+                        <form action="" method="post">
+                          {% csrf_token %}
+                          {{ form.as_div }}
+                          <input type="submit" value="Envoyer">
+                        </form>
+
+{#                        <form action="" method="post">#}
+{#                            {% csrf_token %}#}
+{#                            <div class="col-md-12">#}
+{#                                <input class="form-control" type="text" name="name" placeholder="School name">#}
+{#                                <input class="form-control" type="email" name="email" placeholder="E-mail Address">#}
+{#                                <input class="form-control" type="password" name="password" placeholder="Password">#}
+{#                                <input class="form-control" type="url" name="site" placeholder="Site">#}
+{#                                <input class="form-control" type="date" name="date" placeholder="Creation date">#}
+{#                                <input class="form-control" type="time" name="time" placeholder="Start time">#}
+{#                                <input class="form-control" type="text" name="student" placeholder="Student number">#}
+{#                                <input class="form-control" type="text" name="tuition_fees" placeholder="Tuition fees">#}
+{#                                <select class="form-select mt-3">#}
+{#                                      <option selected disabled value="">Sector</option>#}
+{#                                      <option value="commerce">Commerce</option>#}
+{#                                      <option value="droit">Droit</option>#}
+{#                                      <option value="informatique">Informatique</option>#}
+{#                               </select>#}
+{#                            </div>#}
+{##}
+{#                            <div class="form-check">#}
+{#                              <input class="form-check-input" name="is_eed" type="checkbox">#}
+{#                              <label class="form-check-label">It's EED school</label>#}
+{#                            </div>#}
+{##}
+{#                            <div class="form-button mt-3">#}
+{#                                <button id="submit" type="submit" class="btn btn-primary">Register</button>#}
+{#                            </div>#}
+{#                        </form>#}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
